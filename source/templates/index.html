@@ -6,10 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDEX</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div>
-        <h1>INDEX PAGE</h1>
+    <h1>INDEX PAGE</h1>
+    <div id="mydiv">
     </div>
+    <script type="text/babel">
+        function MyButton() {
+            return (
+            <button onClick={hello()}>
+                I'm a button
+            </button>
+            );
+        }
+
+        function hello() {
+            console.log("hello");
+        }
+        
+        function MyApp() {
+            return (
+            <div>
+                <h1>Welcome to my app</h1>
+                <MyButton />
+            </div>
+            );
+        }
+
+        const container = document.getElementById('mydiv');
+        const root = ReactDOM.createRoot(container);
+        root.render(<MyButton />)
+    </script>
 </body>
 </html>

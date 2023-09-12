@@ -1,0 +1,11 @@
+body {
+    background-color:aqua;
+}
+div {
+    background-color:greenyellow;
+    width:50%;
+    text-align:center;
+}
+p {
+    color:darkblue;
+}
