@@ -2,6 +2,7 @@
 
 - Step 1: Make sure you have Python/Node installed
 - Step 2: Clone Repo to computer
+    - ATM only in the "Deren" branch, not in Main
 - Step 3: Create Python Virtual Environment in main directory (not in frontend or backend)
     - CMD: `python -m venv venv`
 - Step 4: Start Python virtual environment:
@@ -38,6 +39,8 @@
       - To fix run the command: `npm install`
       - My Windows had this error, not my Mac. Something to do with NPM
     - Rerun `npm start` after fixing error
+- Step 12: Quit both servers
+    - Both Flask and React server can be quit with: `CTRL + C` in the terminal
 
 # 1: Setup Items
 
