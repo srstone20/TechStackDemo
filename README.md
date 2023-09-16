@@ -34,10 +34,10 @@
 - Step 11: Start React Server
     - `cd` into frontend directory
     - Start CMD: `npm start`
-    - Possible Error:
+    - Possible Error (likely):
       - Server doesn't start, instead shows Error: `react-scripts` is not recognized as an internal or external command
       - To fix run the command: `npm install`
-      - My Windows had this error, not my Mac. Something to do with NPM
+      - This installs the "node_modules" directory content in frontend
     - Rerun `npm start` after fixing error
 - Step 12: Quit both servers
     - Both Flask and React server can be quit with: `CTRL + C` in the terminal
