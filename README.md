@@ -125,23 +125,7 @@
 
 - Code:
 ```
-from flask import Flask,jsonify,request
 
-app = Flask(__name__)
-
-# Home Route
-@app.route("/spider", methods=['GET'])
-def home():
-  if(request.method == 'GET'):
-    data = {
-      "Name": "Miles Morales",
-      "Age": "17",
-      "HeroName": "Spider-Man"
-    }
-    return jsonify(data)
-    
-if __name__ == '__main__':
-  app.run(debug=True)
 ```
 - Done in flask-server > `server.py`
 - Data is just demo code, showing API working
@@ -186,29 +170,6 @@ if __name__ == '__main__':
 - Remove all of the code
 - Replace with:
 ```
-import React, { useState, useEffect } from 'react';
 
-function App() {
-  const [data, setData] = useState([{}])
-  useEffect(() => {
-    fetch("/spider").then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-      }
-    )
-  }, [])
-
-  return (
-    <div>
-      <h1>JSON Results:</h1>
-      <p>Name: {data.Name}</p>
-      <p>Age: {data.Age}</p>
-      <p>Hero Name: {data.HeroName}</p>
-    </div>
-  );
-}
-export default App;
 
 ```
