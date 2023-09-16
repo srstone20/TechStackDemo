@@ -9,6 +9,8 @@
   - [Video Tutorial: Linking React to Flask](https://youtu.be/7LNl2JlZKHA?si=BjXOvCrcIqu6VkwW)
   - [Adding Bootstrap to React](https://www.youtube.com/watch?v=xdXd8BJwJ-U)
   - [Multiple Pages in React](https://isotropic.co/react-multiple-pages/)
+  - [Add Props to React Components](https://www.youtube.com/watch?v=PHaECbrKgs0)
+  - [Posting Data with React](https://youtu.be/9KaMsGSxGno?si=lIGatPXmjXOfu1W2)
 
 ## 1.1: Create Backend Items
 
