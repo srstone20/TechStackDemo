@@ -1,5 +1,44 @@
 # 0: How to run on your machine
 
+- Step 1: Make sure you have Python/Node installed
+- Step 2: Clone Repo to computer
+- Step 3: Create Python Virtual Environment in main directory (not in frontend or backend)
+    - CMD: `python -m venv venv`
+- Step 4: Start Python virtual environment:
+    - Mac CMD: `source venv/bin/activate`
+    - Windows CMD: `.\venv\Scripts\activate`
+- Step 5: Install packages
+    - Mac CMD: `pip install -r requirements.txt` (have to test)
+    - Windows CMD: `pip install -r .\requirements.txt`
+    - Can check if installed with: `pip list`
+    - Only ones added were: Flask, Flask-Cors, Flask-RESTful
+- Step 6: Start Flask Server
+    - Need python environment running
+    - `cd` into backend directory
+    - Start CMD: `python server.py`
+- Step 7: Check address where Flask is running
+    - In the terminal there will be line: "* Running on http://127.0.0.1:5000" (this was my default)
+    - Keep track of this location
+    - Home Page located at previous address plus: `/home`
+- Step 8: Open a 2nd terminal, keep flask terminal open
+- Step 9: Check React Proxy
+    - Have to set Proxy to location from Step 7
+    - Open frontend > package.json
+    - Check Line 5: `"proxy": "http://127.0.0.1:5000",`
+    - Set this location to where your Flask is running
+- Step 10: Check React URL item
+    - Open frontend > src > pages > view1.jsx
+    - Check line 7: `const url = "http://127.0.0.1:5000/view1"`
+    - Set this line to the Flask location from Step 7
+- Step 11: Start React Server
+    - `cd` into frontend directory
+    - Start CMD: `npm start`
+    - Possible Error:
+      - Server doesn't start, instead shows Error: `react-scripts` is not recognized as an internal or external command
+      - To fix run the command: `npm install`
+      - My Windows had this error, not my Mac. Something to do with NPM
+    - Rerun `npm start` after fixing error
+
 # 1: Setup Items
 
 - Need:
