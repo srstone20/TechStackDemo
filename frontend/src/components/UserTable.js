@@ -1,5 +1,6 @@
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Table from 'react-bootstrap/Table'
+import Table from 'react-bootstrap/Table';
 
 const UserTable = (props) => {
     const data = props.names;
@@ -8,27 +9,17 @@ const UserTable = (props) => {
         <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>User ID</th>
                     <th>Name</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        {
-                            Object.keys(data).map((key, index) => (
-                                <p key={index}>{key}</p>
-                            ))
-                        }
-                    </td>
-                    <td>
-                        {
-                            Object.keys(data).map((key, index) => (
-                                <p key={index}>{data[key]}</p>
-                            ))
-                        }
-                    </td>
-                </tr>
+                {data.map((user, index) => (
+                    <tr key={index}>
+                        <td>{user.user_id}</td>
+                        <td>{user.name}</td>
+                    </tr>
+                ))}
             </tbody>
         </Table>
     );

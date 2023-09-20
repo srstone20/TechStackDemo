@@ -7,7 +7,10 @@ function View1() {
     const url = "http://127.0.0.1:5000/view1"
     const [data, setData] = useState({
         name: ""
-    })
+    });
+
+    // Store the submitted name
+    const [submittedName, setSubmittedName] = useState(""); 
 
     const pageHeaderItems = {
         "TopWords": "View 1",
@@ -16,10 +19,9 @@ function View1() {
 
     // Handles the text box input
     function handle(event) {
-        const newData={...data}
+        const newData = { ...data }
         newData[event.target.id] = event.target.value
         setData(newData)
-        console.log(newData)
     }
 
     // Handles the submission POST to the API
@@ -29,7 +31,10 @@ function View1() {
             name: data.name
         })
         .then(res => {
-            console.log(res.data)
+            console.log(res.data);
+            // Set the submitted name and clear the input field
+            setSubmittedName(data.name);
+            setData({ name: "" });
         })
     }
 
@@ -38,7 +43,7 @@ function View1() {
             <JumbotronTemplate words={pageHeaderItems} />
             <div className='container-fluid'>
                 <div className='container'>
-                    <p className="display-5 fw-bold text-center">Hello {data.name} !</p>
+                    <p className="display-5 fw-bold text-center">Hello {submittedName} !</p>
                     <br></br>
                     <form onSubmit={(event) => submit(event)} className='text-center'>
                         <input onChange={(event) => handle(event)} id="name" value={data.name} placeholder='name' type="text"></input>
@@ -46,7 +51,6 @@ function View1() {
                     </form>
                 </div>
             </div>
-            
         </div>
     );
 }
